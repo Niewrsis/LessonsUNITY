@@ -7,21 +7,8 @@ public class Player : MonoBehaviour
 {
     [field: SerializeField] public float MovementSpeed { get; private set; }
     [SerializeField] private float rotationSpeed;
-    [SerializeField] private float jumpForce;
+    [field: SerializeField] public float jumpForce { get; private set; }
 
     private Rigidbody _rb;
     public Rigidbody Rb => _rb;
-
-    private void Awake()
-    {
-        //case1
-        /*
-        if (gameObject.TryGetComponent<Rigidbody>(out var rb))
-        {
-            _rb = rb;
-        }
-        */
-
-
-    }
 }

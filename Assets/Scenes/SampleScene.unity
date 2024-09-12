@@ -221,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74664809}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MovementSpeed>k__BackingField: 0
   rotationSpeed: 0
-  jumpForce: 0
+  <jumpForce>k__BackingField: 2
 --- !u!54 &962007957
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -594,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418a215d5688cc345bce205e0d61fd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 962007956}
 --- !u!4 &1677194682
 Transform:
   m_ObjectHideFlags: 0

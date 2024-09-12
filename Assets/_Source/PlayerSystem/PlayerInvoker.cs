@@ -11,8 +11,12 @@ public class PlayerInvoker
     {
         _playerMovement = new();
     }
+    public void GetPlayer(Player player)
+    {
+        _player = player;
+    }
     public void InvokeJump()
     {
-        _playerMovement.Jump(_player.Rb, 2f);
+        _playerMovement.Jump(_player.Rb, _player.jumpForce);
     }
 }

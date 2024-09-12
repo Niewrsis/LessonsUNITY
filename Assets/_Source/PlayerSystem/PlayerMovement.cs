@@ -6,6 +6,6 @@ public class PlayerMovement
 {
     public void Jump(Rigidbody rb, float jumpForce)
     {
-        //jump logic
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }
