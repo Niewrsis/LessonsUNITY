@@ -356,8 +356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MovementSpeed>k__BackingField: 0
-  rotationSpeed: 0
-  <jumpForce>k__BackingField: 2
+  <RotationSpeed>k__BackingField: 0
+  <JumpForce>k__BackingField: 2
 --- !u!54 &962007957
 Rigidbody:
   m_ObjectHideFlags: 0
