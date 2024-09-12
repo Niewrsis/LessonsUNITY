@@ -6,10 +6,7 @@ public class InputListener : MonoBehaviour
 {
     [SerializeField] private Player player;
     private PlayerInvoker _playerInvoker;
-    private void Awake()
-    {
-        _playerInvoker.GetPlayer(player);
-    }
+
     private void Update()
     {
         ReadJumpInput();
@@ -19,7 +16,7 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _playerInvoker.InvokeJump();
+            _playerInvoker.InvokeJump(player);
         }
     }
 }

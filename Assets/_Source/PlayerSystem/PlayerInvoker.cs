@@ -5,18 +5,13 @@ using UnityEngine;
 public class PlayerInvoker
 {
     private PlayerMovement _playerMovement;
-    private Player _player;
 
     public PlayerInvoker()
     {
         _playerMovement = new();
     }
-    public void GetPlayer(Player player)
+    public void InvokeJump(Player player)
     {
-        _player = player;
-    }
-    public void InvokeJump()
-    {
-        _playerMovement.Jump(_player.Rb, _player.jumpForce);
+        _playerMovement.Jump(player.Rb, player.JumpForce);
     }
 }

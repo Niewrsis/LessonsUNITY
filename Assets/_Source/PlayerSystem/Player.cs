@@ -6,8 +6,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [field: SerializeField] public float MovementSpeed { get; private set; }
-    [SerializeField] private float rotationSpeed;
-    [field: SerializeField] public float jumpForce { get; private set; }
+    [field: SerializeField] public float RotationSpeed { get; private set; }
+    [field: SerializeField] public float JumpForce { get; private set; }
 
     private Rigidbody _rb;
     public Rigidbody Rb => _rb;
