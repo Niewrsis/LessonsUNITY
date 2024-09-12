@@ -5,17 +5,24 @@ using UnityEngine;
 public class InputListener : MonoBehaviour
 {
     [SerializeField] private Player player;
+    private UIManager _uiManager;
     private PlayerInvoker _playerInvoker;
+    private bool _isBlockerActive = false;
 
     private void Awake()
     {
         _playerInvoker = new(player);
+        _uiManager = GetComponent<UIManager>();
     }
     private void Update()
     {
-        ReadJumpInput();
-        ReadMoveInput();
-        ReadRotationInput();
+        ReadInputBlockerInput();
+        if (!_isBlockerActive)
+        {
+            ReadJumpInput();
+            ReadMoveInput();
+            ReadRotationInput();
+        }
     }
 
     private void ReadJumpInput()
@@ -45,6 +52,14 @@ public class InputListener : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             _playerInvoker.InvokeRotationRight();
+        }
+    }
+    private void ReadInputBlockerInput()
+    {
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            _uiManager.WarningTextOpener();
+            _isBlockerActive = !_isBlockerActive;
         }
     }
 }
